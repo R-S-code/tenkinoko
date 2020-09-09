@@ -1,0 +1,68 @@
+html, body, ul, li, img, div {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: url("../images/view.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.white {
+    display: block;
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+.hina_serifu {
+    position: absolute;
+    font-family: serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100vw;
+    font-size: 60px;
+    z-index: 2;
+}
+.vanish {
+    opacity: 1;
+    animation: vanish 3s forwards;
+}
+.appear {
+    opacity: 0;
+    animation: appear 0.3s forwards;
+}
+@keyframes vanish{
+    0% {opacity: 1;}
+    40% {opacity: 1}
+    100% {opacity: 0}
+}
+@keyframes appear{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.hina img {
+    position: fixed;
+    top: 10vh;
+    right: 16vw;
+    opacity: 0;
+    z-index: 2;
+}
+.appear2 {
+    animation: appear 2s forwards;
+}
+.appear2 img {
+    animation: appear 3s forwards;
+}
+.vanish2 {
+    animation: vanish 5s forwards;
+}
+.title img {
+    opacity: 0;
+    position: absolute;
+    top: 6vh;
+    left: 10vw;
+    z-index: 2;
+}

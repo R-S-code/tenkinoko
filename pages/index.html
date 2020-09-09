@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+    <title>天気の子</title>
+    <link rel="stylesheet" href="../css/main.css"> 
+</head>
+<body>
+<!-- セリフ -->
+<div id="hina" class="hina_serifu">ねえ、今から晴れるよ</div>
+<img id="white" class="white" src="../images/white.png">
+<!-- オープニングのひなの画像 -->
+<div id="hina2" class="hina">
+<img src="../images/hina.png">
+</div>
+<!-- タイトル -->
+<div id="title" class="title">
+    <img src="../images/title.png">
+</div>
+</body>
+<script>
+    const hina = document.getElementById("hina");
+    const hina2 = document.getElementById("hina2");
+    const white = document.getElementById("white");
+    const titile =  document.getElementById("title");
+
+    window.onload = ()  =>  {
+        hina.classList.add("vanish");//3s
+        setTimeout(function() {
+            hina.classList.remove("vanish");
+            hina.classList.add("appear");//0.3s
+            hina.innerText = "帆高..."; 
+        }, 3400);
+        setTimeout(function() {
+            hina.classList.remove("appear");//0.3s
+            hina.classList.add("vanish");//3s
+        }, 4100);
+        setTimeout(function() {
+            hina.classList.remove("vanish")
+            hina.classList.add("appear");//0.3s
+            hina.innerText = "会いたいよ...";
+        }, 7800);
+        setTimeout(function() {
+            hina.classList.remove("appear");//0.3s
+            hina.classList.add("vanish");//3s
+        }, 8500);
+        setTimeout(function() {
+            hina2.classList.add("appear2");
+        }, 12500);
+        setTimeout(function() {
+            white.classList.add("vanish2");
+        }, 12800);
+        setTimeout(function() {
+            title.classList.add("appear2");
+        }, 16500);
+    };
+</script>
+</body>
+</html>
